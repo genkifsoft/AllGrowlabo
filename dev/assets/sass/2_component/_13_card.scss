@@ -1,0 +1,91 @@
+.card{
+    perspective: 100rem;
+    position: relative;
+    height: 35rem;
+    animation-duration: 3s;
+    animation-name: coursesanimation;
+    &__side{
+        backface-visibility: hidden;
+        width: 100%;
+        transition: all 0.8s ease;
+        height: 35rem;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        &--front{
+            background-color: #ffffff;
+        }
+        &--back{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: green;
+            transform: rotateY(180deg);
+        }
+    }
+    &:hover &__side--front{
+        cursor: pointer;
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+    &__picture{
+        position: relative;
+        clip-path: ellipse(80% 70% at 50% 30%);
+        &--1{
+            background-image: linear-gradient(to right,rgba(45, 110, 189, 0.4),rgba(24, 85, 162, 1)), url("../img/picture.jpeg");
+            height: 20rem;
+            width: 100%;
+            .card__heading-span{
+                background-image: linear-gradient(to right,rgba(45, 110, 189, 0.4),rgba(24, 85, 162, 0.7));
+            }
+        }
+        &--2{
+            background-image: linear-gradient(to right, rgba(93, 50, 132, 0.4), rgba(84, 45, 119, 1)), url('../img/picture.jpeg');
+            height: 20rem;
+            width: 100%;
+            .card__heading-span{
+                background-image: linear-gradient(to right, rgba(93, 50, 132, 0.4), rgba(84, 45, 119, 0.7));
+            }
+        }
+    }
+    &__heading-span{
+        position: absolute;
+        left: 0;
+        bottom: 1rem;
+        color: $colorWhite;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        border-radius: 1.5rem;
+    }
+    &__detail{
+        padding-top: 2rem;
+        ul{
+            text-align: center;
+            li:after{
+                border-bottom: 1px solid #ccc;
+                content: "";
+                display: block;
+                width: 50%;
+                margin: 10px auto;
+            }
+            li:last-child:after{
+                content: "";
+                display: block;
+                border-bottom: none;
+            }
+            li{
+                // padding: 1rem 0px;
+                color: #3c3e40;
+                font-weight: bold;
+            }
+            li:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+.row{
+    margin-top: 3rem;
+}

@@ -1,26 +1,85 @@
 /* Header
 ------------------------------------------------------------*/
 .c-header{
-    margin-top: 20px;
-    &__line{
-        display: inline-block;
-        background-color: #a8a8a8;
-        height: 1px;
-        width: 100%;
-    }
-    &__line:after{
-        content: "";
-        display: block;
-        clear: both;
+    margin-top: 1rem;
+    .l-container{
+        display: flex;
+        .c-header__logo{
+            width: 10rem;
+            height: 7rem;
+            display: flex;
+        }
+        .c-menu{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            ul{
+                display: flex;
+                li{
+                    font-size: 1.6rem;
+                    line-height: 7rem;
+                    color: $colorWhite;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    padding-left: 30px;
+                }
+                
+            }
+            .c-menu__action{
+                display: flex;
+                .c-text--initial{
+                    text-transform: inherit;
+                }
+                li{
+                    font-size: 1.4rem !important;
+                    i{
+                        font-weight: bold;
+                    }
+                    a:hover{
+                        padding: 7px;
+                        border-radius: 50%;
+                        background-color: $colorPurple;
+                    }
+                    span:hover{
+                        padding: 7px;
+                        border-radius: 20px;
+                        background-color: $colorPurple;
+                        transition: 0.3s all ease;
+                    }
+                    .account__define{
+                        padding: 7px;
+                        border-radius: 20px;
+                        background-color: $colorPurple;
+                    }
+                }
+                li:last-child(){
+                    position: relative;
+                }
+                &--user{
+                    margin-top: -15px;
+                    display: block;
+                    position: absolute;
+                    text-align: left;
+                    background-color: $colorPurple;
+                    width: 100%;
+                    left: 0px;
+                    border-radius: 10px;
+                    li{
+                        margin: 10px 0px 23px -10px;
+                        line-height: 0px;
+                        padding-top: 10px;
+                        display: flex;
+                        text-transform: inherit;
+                    }
+                    li:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .c-menu__action li:nth-of-type(2){
+                position: relative;
+                cursor: pointer;
+            }
+        }
     }
 }
-.c-header__logo{
-    width: 250px;
-    float: left;
-}
-
-/* Main menu
-------------------------------------------------------------*/
-#c-gnav{
-    
- }

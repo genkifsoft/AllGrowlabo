@@ -12,3 +12,23 @@ btn
     border-radius: 20px;
     line-height: 1;
 }
+.btn-white{
+    color: #3c3e40;
+    background-color: #ffffff;
+}
+.btn{
+    padding: 1.5rem 4rem;
+    border-radius: 10px;
+    transform: translateX(-10px);
+    font-weight: bold;
+}
+.btn:hover{
+    background-image: linear-gradient(to right, rgba(93, 50, 132, 0.7), rgba(84, 45, 119, 1));
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+    color: #ffff;
+}
+.btn:active{
+    // outline: none;
+    transform: translateX(-1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
